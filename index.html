@@ -24,6 +24,35 @@ a {
                     </strong>
 
                     <h4 lang="ko">
+                        Python (일본어) 
+                    </h4>
+                    <p>
+                        お子様が学校でプログラミングを勉強されていたり、プログラミング教室に通われている場合Pythonがその教材として使用されている可能性もあるかと思います。Pythonというプログラミング言語はLinuxだけでなくWindows等でも動く教育や研究用としても広く使われているものです。今朝私が提示した下記のコードはfeedparaerという、Pythonのパーツさえ準備すればすぐに動かしてみる事が出来ますからお子様がおられる方は一緒に試してみて下さい。先日私が元同僚のM木さんを見かけた際にM木さんは私に気付いたようでしたし、当初は驚かれていたようでしたが恐らくその後で誰かがものすごく面白い噂を流したのではないかと思います。それは皆様が下記のコードを実験してみれば否定されるものかも知れませんね。 
+                    </p>
+
+<div class="highlight" style="background: #f0f0f0"><pre style="line-height: 125%;"><span></span><span style="color: #60a0b0; font-style: italic">#!/usr/bin/python3</span>
+
+<span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">feedparser</span>   <span style="color: #60a0b0; font-style: italic"># 이제 feedparser라는 module를 사용하겠다는 말 </span>
+<span style="color: #007020; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">time</span>     <span style="color: #60a0b0; font-style: italic"># 이제 time라는 module를 사용하겠다는 말 </span>
+
+<span style="color: #007020; font-weight: bold">try</span>: 
+    <span style="color: #007020; font-weight: bold">while</span> <span style="color: #007020; font-weight: bold">True</span>:     <span style="color: #60a0b0; font-style: italic"># 무한히 다음을 실행항라는 말 </span>
+        <span style="color: #60a0b0; font-style: italic"># 우선 feed_url라는 變數에 저의 blog의 RSS피드 주소를 넣습니다 </span>
+        feed_url <span style="color: #666666">=</span> <span style="color: #4070a0">&quot;https://mycatiskorean.blogspot.com//feeds/posts/default&quot;</span>
+        <span style="color: #60a0b0; font-style: italic"># feedparser를 사용해 그 RSS피드를 처리합니다 </span>
+        fp <span style="color: #666666">=</span> feedparser<span style="color: #666666">.</span>parse(feed_url)
+        <span style="color: #007020; font-weight: bold">if</span> (<span style="color: #007020">len</span>(fp<span style="color: #666666">.</span>entries) <span style="color: #666666">!=</span> <span style="color: #40a070">0</span>):     <span style="color: #60a0b0; font-style: italic"># 하나 이상의 기사가 있을 경우에 다음을 실형하라는 말 </span>
+            latest <span style="color: #666666">=</span> fp<span style="color: #666666">.</span>entries[<span style="color: #40a070">0</span>]     <span style="color: #60a0b0; font-style: italic"># feedparser가 처리한 일 속의 첫번째 요소(최신 기사)를 latest라는 變數에 넣습니다 </span>
+            <span style="color: #007020">print</span>(latest<span style="color: #666666">.</span>title)     <span style="color: #60a0b0; font-style: italic"># latest라는 變數에서 기사 제목을 냅니다 </span>
+            <span style="color: #007020">print</span>(latest<span style="color: #666666">.</span>link)     <span style="color: #60a0b0; font-style: italic"># latest라는 變數에서 기사 URL을 냅니다 </span>
+        <span style="color: #007020; font-weight: bold">else</span>:     <span style="color: #60a0b0; font-style: italic"># 하나도 기사가 없을 경우에 error 냅니다 </span>
+            <span style="color: #007020">print</span>(<span style="color: #4070a0">&quot;ERROR: cannot fetch data&quot;</span>)
+        time<span style="color: #666666">.</span>sleep(<span style="color: #40a070">3</span>)     <span style="color: #60a0b0; font-style: italic"># 3초 동안 아무 것도 하지 않고 대기합니다 </span>
+<span style="color: #007020; font-weight: bold">except</span> <span style="color: #007020">Exception</span> <span style="color: #007020; font-weight: bold">as</span> e: 
+    <span style="color: #007020">print</span>(e)     <span style="color: #60a0b0; font-style: italic"># 예기하지 않은 error 난 경우에 그걸 냅니다 </span>
+</pre></div>
+
+                    <h4 lang="ko">
                         VirtualBox란? (일본어) 
                     </h4>
                     <p>
