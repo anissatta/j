@@ -24,6 +24,34 @@ a {
                     </strong>
 
                     <h4 lang="ko">
+                        Debian (일본어) 
+                    </h4>
+                    <p>
+                        私のPCだとLive USBをVirtualBoxで動かすのは不可能だったのですが、これは恐らくLive USBのramfsとかいうメモリをハードディスクの代わりに使う仕組みによるものだと思われます。(メモリが足りなかったのでしょう) 
+                    </p>
+                    <p>
+                        下記の通常のインストールメディアで仮想ハードディスクにDebianをインストールしたところスイスイ動いています。(私は無人インストールでなく有人インストールにしました) 
+                        <a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/" style="word-break: break-word;">
+                            https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/ 
+                        </a>
+                        內 'debian-13.4.0-amd64-netinst.iso' 選擇 
+                    </p>
+                    <p>
+                        <a href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.4.0-amd64-netinst.iso" style="word-break: break-word;">
+                            https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.4.0-amd64-netinst.iso 
+                        </a>
+                    </p>
+                    <p>
+                        ただ追加でsudoersというファイルに写真にあるような変更を管理者(root)として追加したりcurlをインストールする必要がありました。 このことも含め明日新たなマニュアルを作ってみますが、この説明だけで分かるというオタクのような方は早速試してみて下さい。sudoersをいじらなくともsuコマンドで管理者になってからinst.sh内にあるaptコマンドを実行するという方法もあるかと思いますが。 
+                    </p>
+                    <figure class="image">
+                        <img alt="junk" src="deb1.jpg" style="max-width: 100%;">
+                    </figure>
+                    <figure class="image">
+                        <img alt="junk" src="deb2.jpg" style="max-width: 100%;">
+                    </figure>
+
+                    <h4 lang="ko">
                         Python (일본어) 
                     </h4>
                     <p>
